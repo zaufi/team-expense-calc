@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit-test-result xmlns:tec="http://code.google.com/p/team-expense-calc/#tec">
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Unbalanced event</text>
+      <used-currency id="rur"/>
+      <participant id="1" payment="0" spent="1"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Unbalanced event with negative 'spent' value</text>
+      <used-currency id="rur"/>
+      <participant id="1" payment="0" spent="-1"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Unbalanced event with negative 'payment' value</text>
+      <used-currency id="rur"/>
+      <participant id="1" payment="-1" spent="2"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Unbalanced event with invalid 'spent' value</text>
+      <used-currency id="rur"/>
+      <participant id="1" payments="a1" spent="invalid"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Unbalanced event with invalid 'payment' value</text>
+      <used-currency id="rur"/>
+      <participant id="1" payment="invalid" spent="0"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Bad event with zero 'payment' value and the only participant</text>
+      <used-currency id="rur"/>
+      <participant id="1" payment="0" spent="0"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Bad event w/o payment and w/ the only participant</text>
+      <used-currency id="rur"/>
+      <participant id="1"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Bad event w/o payments and w/ two participants</text>
+      <used-currency id="rur"/>
+      <participant id="1"/>
+      <participant id="2"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Bad event w/ zero payment and w/ two participants</text>
+      <used-currency id="rur"/>
+      <participant id="1"/>
+      <participant id="2" payment="0"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Event w/ payment and w/ the only participant</text>
+      <used-currency id="rur"/>
+      <participant id="2" payment="1*1"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+  <result>
+    <event xmlns="http://code.google.com/p/team-expense-calc/#tec">
+      <text>Event w/ payment and w/ the only participant</text>
+      <used-currency id="rur"/>
+      <participant id="2" payment="1" spent="1*1"/>
+      <expected-results>
+        <error/>
+      </expected-results>
+    </event>
+    <passed>Error was expected</passed>
+  </result>
+</unit-test-result>

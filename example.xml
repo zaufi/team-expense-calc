@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tec:arrangement SYSTEM "tec.dtd">
+<?xml-stylesheet type="text/xsl" href="tec.xsl"?>
+
+<arrangement xmlns="http://code.google.com/p/team-expense-calc/#tec" version="1.0">
+
+    <title>New Year Snowboarding Session 2009 (Åre, Sweeden)</title>
+
+    <currencies>
+        <currency id="rur" native="true">
+            <name>RUR</name>
+            <xchg to="rur" value="1">1</xchg>
+        </currency>
+        <currency id="eur">
+            <name>EUR</name>
+            <xchg to="rur" value="1">34.4975</xchg>
+            <xchg to="usd" value="1">1.2</xchg>
+        </currency>
+        <currency id="sek">
+            <name>SEK</name>
+            <xchg to="rur" value="10">33.5461</xchg>
+        </currency>
+        <currency id="usd">
+            <name>USD</name>
+            <xchg to="rur" value="1">27,5715</xchg>
+        </currency>
+    </currencies>
+
+    <!-- People who was on NY2k9 vacation -->
+    <members>
+        <member id="b">Barser</member>
+        <member id="d" comment="Diman+Svetko">Diman</member>
+        <member id="i">Ilich</member>
+        <member id="m" comment="Kiruho+Julia">Megasos</member>
+        <member id="z">Zaufi</member>
+        <member id="v">Vanus</member>
+    </members>
+
+    <events>
+
+        <event>
+            <text>Alcohol from duty-free shop (Finland border)</text>
+            <used-currency id="rur" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="eur" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="eur" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="eur" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+
+
+    </events>
+
+</arrangement>

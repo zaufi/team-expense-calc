@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tec-clc-ut.xsl"?>
+
+<arrangement xmlns="http://code.google.com/p/team-expense-calc/#tec" version="1.0">
+
+    <members>
+        <member id="1">first</member>
+        <member id="2">second</member>
+        <member id="3">third</member>
+    </members>
+
+    <currencies>
+        <currency id="rur" native="true">
+            <name>RUR</name>
+        </currency>
+    </currencies>
+
+    <events>
+
+        <event>
+            <text>Just simple event</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" spent="1" />
+
+            <expected-results>
+                <total>1</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Event w/o explicit spent</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" />
+
+            <expected-results>
+                <total>1</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #1 -- both pay equal</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" />
+            <participant id="2" payment="1" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #2 -- both pay equal</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" spent="1" />
+            <participant id="2" payment="1" spent="1" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+        <event>
+            <text>Simple event w/ 2 participants: case #3 -- both pay equal</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" />
+            <participant id="2" payment="1" spent="1" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+        <event>
+            <text>Simple event w/ 2 participants: case #4 -- both pay equal</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" spent="1" />
+            <participant id="2" payment="1" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #5 -- 2nd payed for 1st but spent 0 by himself</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="0" spent="2" />
+            <participant id="2" payment="2" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>2</spent>
+                    <payment>0</payment>
+                    <balance>-2</balance>
+                </participant>
+                <participant id="2">
+                    <spent>0</spent>
+                    <payment>2</payment>
+                    <balance>2</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #6 -- 2nd payed for 1st and spent some money too</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="0" spent="2" />
+            <participant id="2" payment="3" spent="1" />
+
+            <expected-results>
+                <total>3</total>
+                <participant id="1">
+                    <spent>2</spent>
+                    <payment>0</payment>
+                    <balance>-2</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>3</payment>
+                    <balance>2</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #7</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" spent="2" />
+            <participant id="2" payment="2" />
+
+            <expected-results>
+                <total>3</total>
+                <participant id="1">
+                    <spent>2</spent>
+                    <payment>1</payment>
+                    <balance>-1</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>2</payment>
+                    <balance>1</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #8: equal payments and spent</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="1" spent="1" />
+            <participant id="2" payment="2" spent="2" />
+
+            <expected-results>
+                <total>3</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>1</payment>
+                    <balance>0</balance>
+                </participant>
+                <participant id="2">
+                    <spent>2</spent>
+                    <payment>2</payment>
+                    <balance>0</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #9: no payment and spent for one participant</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="2" spent="1" />
+            <participant id="2" />
+
+            <expected-results>
+                <total>2</total>
+                <participant id="1">
+                    <spent>1</spent>
+                    <payment>2</payment>
+                    <balance>1</balance>
+                </participant>
+                <participant id="2">
+                    <spent>1</spent>
+                    <payment>0</payment>
+                    <balance>-1</balance>
+                </participant>
+            </expected-results>
+        </event>
+
+        <event>
+            <text>Simple event w/ 2 participants: case #10: invalid payment</text>
+            <used-currency id="rur" />
+            <participant id="1" payment="2*2" spent="1" />
+            <participant id="2" />
+
+            <expected-results>
+                <error />
+            </expected-results>
+        </event>
+
+    </events>
+</arrangement>

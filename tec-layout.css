@@ -1,0 +1,37 @@
+/*
+ * $Id: tec-layout.css 17 2008-12-09 22:04:58Z I.zaufi $
+ */
+
+table {
+    width: 100%;
+}
+
+.event-num {
+    width: 2%;
+}
+
+.event-total-cost {
+    width: 8%;
+}
+
+div.tooltip {
+    position: relative;
+}
+
+div.tooltip > span {
+    display: none;
+}
+
+div.tooltip > span.left {
+    left: 2em;
+}
+
+div.tooltip > span.right {
+    right: 2em;
+}
+
+th:hover div.tooltip > span,
+td:hover div.tooltip > span {
+    display: block;
+    position: absolute;
+}

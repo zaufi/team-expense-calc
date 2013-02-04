@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit-test-result xmlns:tec="http://code.google.com/p/team-expense-calc/#tec">
+  <result>
+    <tec:event>
+      <tec:pos>1</tec:pos>
+      <tec:text>Just simple event</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>1</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>2</tec:pos>
+      <tec:text>Event w/o explicit spent</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>1</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>3</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #1 -- both pay equal</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>4</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #2 -- both pay equal</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>5</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #3 -- both pay equal</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>6</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #4 -- both pay equal</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>7</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #5 -- 2nd payed for 1st but spent 0 by himself</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>2</tec:spent>
+        <tec:payment>0</tec:payment>
+        <tec:balance>-2</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>0</tec:spent>
+        <tec:payment>2</tec:payment>
+        <tec:balance>2</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>8</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #6 -- 2nd payed for 1st and spent some money too</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>3</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>2</tec:spent>
+        <tec:payment>0</tec:payment>
+        <tec:balance>-2</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>3</tec:payment>
+        <tec:balance>2</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>9</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #7</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>3</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>2</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>-1</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>2</tec:payment>
+        <tec:balance>1</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>10</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #8: equal payments and spent</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>3</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>1</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>2</tec:spent>
+        <tec:payment>2</tec:payment>
+        <tec:balance>0</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>11</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #9: no payment and spent for one participant</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:total>2</tec:total>
+      <tec:native-total>NaN</tec:native-total>
+      <tec:participant id="1">
+        <tec:spent>1</tec:spent>
+        <tec:payment>2</tec:payment>
+        <tec:balance>1</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+      <tec:participant id="2">
+        <tec:spent>1</tec:spent>
+        <tec:payment>0</tec:payment>
+        <tec:balance>-1</tec:balance>
+        <tec:native-balance>NaN</tec:native-balance>
+      </tec:participant>
+    </tec:event>
+    <passed>No errors</passed>
+  </result>
+  <result>
+    <tec:event>
+      <tec:pos>12</tec:pos>
+      <tec:text>Simple event w/ 2 participants: case #10: invalid payment</tec:text>
+      <tec:used-currency id="rur"/>
+      <tec:error>Invalid balance for this event. Check XML file!</tec:error>
+    </tec:event>
+    <passed>Error was expected</passed>
+  </result>
+</unit-test-result>

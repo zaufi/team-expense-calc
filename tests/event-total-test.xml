@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="tec-evt-ut.xsl"?>
+
+<unit-test-data xmlns="http://code.google.com/p/team-expense-calc/#tec" version="1.0">
+    <event expect="6">
+        <participant id="1" payment="1" />
+        <participant id="2" payment="2" />
+        <participant id="3" payment="3" />
+    </event>
+    <event expect="69">
+        <participant id="1" payment="12" />
+        <participant id="2" payment="23" />
+        <participant id="3" payment="34" />
+    </event>
+    <event expect="702">
+        <participant id="1" payment="123" />
+        <participant id="2" payment="234" />
+        <participant id="3" payment="345" />
+    </event>
+    <event expect="7037.01">
+        <participant id="1" payment="1234.56" />
+        <participant id="2" payment="2345.67" />
+        <participant id="3" payment="3456.78" />
+    </event>
+
+    <event expect="false">
+        <used-currency id="rur" />
+        <participant id="1" payment="1*1" />
+        <participant id="2" payment="2" />
+        <participant id="3" payment="1*1" />
+    </event>
+</unit-test-data>

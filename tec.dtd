@@ -1,0 +1,44 @@
+<!ELEMENT arrangement (title?, members, currencies, events)>
+<!ATTLIST arrangement
+    version NMTOKEN "1.0"
+    xmlns CDATA #FIXED 'http://code.google.com/p/team-expense-calc/#tec'
+    >
+
+    <!ELEMENT title (#PCDATA)>
+
+    <!ELEMENT members (member+)>
+
+        <!ELEMENT member (#PCDATA)>
+        <!ATTLIST member id ID #REQUIRED>
+
+    <!ELEMENT currencies (currency+)>
+
+        <!ELEMENT currency (name, xchg*)>
+        <!ATTLIST currency
+            id ID #REQUIRED
+            native (true|false) #IMPLIED
+            >
+
+        <!ELEMENT name (#PCDATA)>
+
+        <!ELEMENT xchg (#PCDATA)>
+        <!ATTLIST xchg
+            to IDREF #REQUIRED
+            value CDATA #IMPLIED
+            >
+
+    <!ELEMENT events (event+)>
+
+        <!ELEMENT event (text, used-currency, participant+)>
+
+        <!ELEMENT text (#PCDATA)>
+
+        <!ELEMENT used-currency (#PCDATA)>
+        <!ATTLIST used-currency id IDREF #REQUIRED>
+
+        <!ELEMENT participant (#PCDATA)>
+        <!ATTLIST participant
+            id IDREF #REQUIRED
+            payment CDATA #IMPLIED
+            spent CDATA #IMPLIED
+            >

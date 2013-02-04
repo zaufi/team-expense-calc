@@ -1,0 +1,119 @@
+/*
+ * $Id: tec.css 21 2008-12-10 13:55:01Z I.zaufi $
+ */
+
+body {
+    color: yellow;
+    background-color: #355D2F;
+}
+
+table.events {
+    color: black;
+    background-color: #A6A660;
+    border: 1px solid yellow;
+    padding: 2px 3px;
+}
+
+caption {
+    color: yellow;
+    text-align: right;
+    font-weight: bold;
+}
+
+th {
+    color: black;
+    background-color: #747443;
+}
+
+td {
+    text-align: center;
+    background-color: #C3C370;
+}
+/* Highlight row under cursor */
+tr:hover td {
+    background-color: #E3E390;
+}
+
+/* Cells with positive numbers */
+.plus {
+    color: green;
+}
+td.plus:hover {
+    background-color: #E3FF90;
+}
+/* Cells with negative numbers */
+.minus {
+    color: red;
+}
+td.minus:hover {
+    background-color: #FFE390;
+}}
+/* Cells with zeors */
+.zero {
+    color: black;
+}
+/* Cells with error messages */
+td.alert {
+    color: red;
+    background-color: #450818;
+    font-weight: bold;
+}
+tr:hover td.alert {
+    background-color: #651818;
+}
+/* Cells without content... I.e. member was not participate on event */
+td.empty,
+tr:hover td.empty {
+    background-color: #848453;
+}
+
+/* Tooltip colors */
+*:hover div.tooltip > span {
+    border: 1px solid #444413;
+    background-color: #E3E390;
+    color: black;
+    top: 1.2ex;
+}
+div.tooltip span td {
+    background-color: #E3E390;
+}
+
+/* Event details tooltip */
+th:hover div.tooltip span.event-details {
+    left: 1.5em;
+}
+span.event-details td  {
+    text-align: left;
+    font-weight: normal;
+}
+span.event-details table > tr > td:first-child {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* Member expense details tooltip */
+td:hover div.tooltip span.left,
+td:hover div.tooltip span.right {
+    width: 10em;
+}
+span.left td,
+span.right td {
+    text-align: left;
+    font-weight: normal;
+}
+span.left table > tr > td:first-child,
+span.right table > tr > td:first-child {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 1ex;
+}
+
+/* Currency exchange rates tooltip */
+th:hover div.tooltip span.xchg-rates {
+    width: 12em;
+    padding: 1ex 1em;
+}
+span.xchg-rates td {
+    text-align: center;
+    font-weight: normal;
+}

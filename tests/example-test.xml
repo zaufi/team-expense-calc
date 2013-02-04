@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tec:arrangement SYSTEM "tec.dtd">
+<?xml-stylesheet type="text/xsl" href="tec-ut.xsl"?>
+
+<arrangement xmlns="http://code.google.com/p/team-expense-calc/#tec" version="1.0">
+
+    <title>New Year Snowboarding Session 2009 (Äre, Sweeden)</title>
+
+    <!-- People who was on NY2k9 vacation -->
+    <members>
+        <member id="z">Zaufi</member>
+        <member id="b">Barser</member>
+        <member id="d">Diman</member>
+        <member id="m">Megasos</member>
+        <member id="s">Sergio</member>
+    </members>
+
+    <currencies>
+        <currency id="rur" native="true">
+            <name>RUR</name>
+        </currency>
+        <currency id="eur">
+            <name>EUR</name>
+            <xchg to="rur" value="1">34.4975</xchg>
+        </currency>
+        <currency id="sek">
+            <name>SEK</name>
+            <xchg to="rur" value="1">3.35461</xchg>
+        </currency>
+        <currency id="usd">
+            <name>USD</name>
+            <xchg to="rur" value="1">27,5715</xchg>
+        </currency>
+    </currencies>
+
+    <events>
+
+        <event>
+            <text>Alcohol from duty-free shop (Finland border)</text>
+            <used-currency id="rur" />
+            <participants>
+                <participant id="z" payment="8500" />
+                <participant id="b" payment="0" />
+                <participant id="d" payment="0" />
+                <participant id="m" payment="0" />
+                <participant id="s" payment="0" />
+            </participants>
+        </event>
+        <event>
+            <text>Some food from duty-free shop (Finland border)</text>
+            <used-currency id="rur" />
+            <participants>
+                <participant id="z" payment="0" />
+                <participant id="b" payment="1100" />
+                <participant id="d" payment="1500" />
+                <participant id="m" payment="1000" />
+                <participant id="s" payment="0" />
+            </participants>
+        </event>
+
+        <event>
+            <text>Dinner at ship</text>
+            <used-currency id="eur" />
+            <participants>
+                <participant id="b" payment="100" />
+                <participant id="d" payment="100" />
+                <participant id="z" payment="0" />
+                <participant id="m" payment="50" />
+                <participant id="s" payment="0" />
+            </participants>
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="sek" />
+            <participants>
+                <participant id="b" payment="100" />
+                <participant id="m" payment="0" />
+                <participant id="s" payment="0" />
+            </participants>
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="sek" />
+            <participants>
+                <participant id="d" payment="100" />
+                <participant id="z" payment="0" />
+            </participants>
+        </event>
+
+    </events>
+
+</arrangement>

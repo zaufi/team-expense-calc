@@ -1,0 +1,112 @@
+#
+# $Id: tec.css 13 2008-12-07 16:11:54Z I.zaufi $
+#
+
+body th.hidden {
+    color: black;
+}
+
+table {
+    width: 100%;
+}
+
+th, td.total {
+    color: black;
+    background-color: #35B237;
+    border: 1px ridge gray;
+}
+th[colspan] {
+    color: #003D09;
+}
+th.hidden {
+    color: black;
+    background-color: white;
+    border: none;
+}
+
+td {
+    border: 1px ridge gray;
+    text-align: center;
+}
+
+td.empty {
+    border: none;
+    background-color: gray;
+}
+
+td.alert {
+    background-color: red;
+    font-weight: bold;
+}
+
+.event-num {
+    width: 2%;
+}
+
+.event-total-cost {
+    width: 8%;
+}
+
+td.zero, td.plus {
+    background-color: #94FFB2;
+    color: green;
+}
+td.minus {
+    background-color: #94FFB2;
+    color: red;
+}
+
+div.tooltip {
+    position: relative;
+}
+
+div.tooltip > span {
+    display: none;
+    text-decoration: none;
+}
+
+div.tooltip > span.left {
+    left: 2em;
+}
+
+div.tooltip > span.right {
+    right: 2em;
+}
+
+th:hover div.tooltip > span,
+td:hover div.tooltip > span {
+    display: block;
+    position: absolute;
+    border: 1px solid WindowFrame;
+    background-color: InfoBackground;
+    color: InfoText;
+}
+
+th:hover > div.tooltip > span {
+    width: 25em;
+}
+
+td:hover > div.tooltip > span {
+    width: 10em;
+}
+div.tooltip * td {
+    border: none;
+}
+
+td.tfc {
+    text-align: right;
+    font-weight: bold;
+    width: 20%;
+}
+
+td.tsc {
+    text-align: left;
+    font-weight: normal;
+}
+
+span.minus {
+    color: red;
+}
+span.plus {
+    color: green;
+}

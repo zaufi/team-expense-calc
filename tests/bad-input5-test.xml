@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tec:arrangement SYSTEM "tec.dtd">
+<?xml-stylesheet type="text/xsl" href="tec-ut.xsl"?>
+
+<arrangement xmlns="http://code.google.com/p/team-expense-calc/#tec" version="1.0">
+    <members>
+        <member id="t">Tester</member>
+    </members>
+    <currencies>
+        <currency />
+    </currencies>
+</arrangement>

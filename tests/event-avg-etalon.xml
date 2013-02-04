@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unit-test-result xmlns="http://code.google.com/p/team-expense-calc/#tec" xmlns:tec="http://code.google.com/p/team-expense-calc/#tec">
+  <test>
+    <event expect="1">
+      <participant id="1" payment="1"/>
+    </event>
+    <result>1</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="1">
+      <participant id="1" payment="3"/>
+      <participant id="2" payment="0"/>
+      <participant id="3" payment="0"/>
+    </event>
+    <result>1</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="1">
+      <participant id="1" payment="1"/>
+      <participant id="2" payment="0"/>
+      <participant id="3" payment="2"/>
+    </event>
+    <result>1</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="0.5">
+      <participant id="1" payment="1" spent="1"/>
+      <participant id="2" payment="0"/>
+      <participant id="3" payment="1"/>
+    </event>
+    <result>0.5</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="NaN">
+      <participant id="1" payment="1" spent="1"/>
+    </event>
+    <result>NaN</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="40">
+      <participant id="1" payment="200" spent="150"/>
+      <participant id="2" payment="0"/>
+      <participant id="3" payment="100" spent="110"/>
+    </event>
+    <result>40</result>
+    <passed/>
+  </test>
+  <test>
+    <event expect="20">
+      <participant id="1" payment="200" spent="150"/>
+      <participant id="2" payment="0"/>
+      <participant id="3" payment="0"/>
+      <participant id="4" payment="100" spent="110"/>
+    </event>
+    <result>20</result>
+    <passed/>
+  </test>
+</unit-test-result>
