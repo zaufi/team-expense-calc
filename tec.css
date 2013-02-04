@@ -7,11 +7,17 @@ body {
     background-color: #355D2F;
 }
 
-table.events {
+table.events, table.summory {
     color: black;
     background-color: #A6A660;
     border: 1px solid yellow;
+    border-top-style: none;
+    border-bottom-style: none;
     padding: 2px 3px;
+}
+
+table.summory {
+    border: 1px solid yellow;
 }
 
 caption {

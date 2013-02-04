@@ -51,6 +51,7 @@
     <html>
         <head>
             <link rel="stylesheet" href="tec-layout.css" type="text/css" />
+            <link rel="stylesheet" href="tec-table.css" type="text/css" />
             <xsl:call-template name="render-stylesheet-links">
                 <xsl:with-param name="stylesheets" select="exsl:node-set($stylesheets)//csslist:stylesheet[@default = 'true']" />
                 <xsl:with-param name="type" select="'stylesheet'" />
@@ -69,6 +70,20 @@
                   />
                 <xsl:text>%; }</xsl:text>
             </style>
+            <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+            <script type="text/javascript" language="javascript" src="http://www.datatables.net/release-datatables/media/js/jquery.dataTables.js"></script>
+            <script type="text/javascript" charset="utf-8" src="http://www.datatables.net/release-datatables/extras/FixedHeader/js/FixedHeader.js"></script>
+            <script type="text/javascript" charset="utf-8">
+            <xsl:text>
+                $(document).ready(function() {
+                    oTable = $('#main').dataTable({
+                        "bJQueryUI": true,
+                        "sPaginationType": "full_numbers"
+                    });
+                    new FixedHeader(oTable);
+                } );
+            </xsl:text>
+            </script>
         </head>
         <body>
             <h1><xsl:value-of select="/tec:arrangement/tec:title" /></h1>
@@ -78,27 +93,41 @@
             </xsl:variable>
             <xsl:choose>
                 <xsl:when test="$is-valid-input = 'true'">
-                    <table class="events">
-                        <caption>Detailed Events List</caption>
+                    <xsl:variable name="tabled-events">
+                        <xsl:call-template name="calc-table-data" />
+                    </xsl:variable>
+                    <table id="main" class="events">
+                        <!--<caption style="caption-side: bottom;">Detailed Events List</caption>-->
+                        <thead>
+                            <xsl:call-template name="render-table-headers">
+                                <xsl:with-param name="row-class" select="'header'" />
+                            </xsl:call-template>
+                        </thead>
+                        <tfoot>
+                            <xsl:call-template name="render-table-headers">
+                                <xsl:with-param name="row-class" select="'footer'" />
+                            </xsl:call-template>
+                        </tfoot>
+                        <tbody>
+                            <xsl:call-template name="render-table-data">
+                                <xsl:with-param name="data" select="exsl:node-set($tabled-events)" />
+                                <xsl:with-param name="root" select="/" />
+                            </xsl:call-template>
+                        </tbody>
+                    </table>
+                    <table id="total" class="summory">
+                        <caption>Summory</caption>
+                        <tfoot>
                         <xsl:call-template name="render-table-headers">
                             <xsl:with-param name="row-class" select="'header'" />
                         </xsl:call-template>
-                        <xsl:variable name="tabled-events">
-                            <xsl:call-template name="calc-table-data" />
-                        </xsl:variable>
-                        <xsl:call-template name="render-table-data">
-                            <xsl:with-param name="data" select="exsl:node-set($tabled-events)" />
-                            <xsl:with-param name="root" select="/" />
-                        </xsl:call-template>
+                        </tfoot>
                         <xsl:call-template name="render-currency-totals">
                             <xsl:with-param name="data" select="exsl:node-set($tabled-events)" />
                         </xsl:call-template>
                         <xsl:call-template name="render-final-balance">
                             <xsl:with-param name="data" select="exsl:node-set($tabled-events)" />
                             <xsl:with-param name="root" select="/" />
-                        </xsl:call-template>
-                        <xsl:call-template name="render-table-headers">
-                            <xsl:with-param name="row-class" select="'footer'" />
                         </xsl:call-template>
                     </table>
                 </xsl:when>
@@ -246,7 +275,6 @@
 
 <xsl:template name="render-currency-totals">
     <xsl:param name="data" />
-
     <tr>
         <th>
             <xsl:attribute name="colspan">
@@ -255,7 +283,6 @@
             <xsl:text>Balance by currency</xsl:text>
         </th>
     </tr>
-
     <xsl:for-each select="/tec:arrangement/tec:currencies/tec:currency">
         <xsl:variable name="currency" select="." />
         <tr>
