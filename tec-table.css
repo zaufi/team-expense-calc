@@ -1,0 +1,244 @@
+/*
+ * DataTables features
+ */
+.dataTables_wrapper {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+}
+
+.dataTables_processing {
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+  border: 1px solid #ddd;
+  text-align: center;
+  color: #999;
+  font-size: 11px;
+  padding: 2px 0;
+}
+
+.dataTables_length {
+  width: 40%;
+  float: left;
+}
+
+.dataTables_filter {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+.dataTables_info {
+  width: 50%;
+  float: left;
+}
+
+.dataTables_paginate {
+  float: right;
+  text-align: right;
+}
+
+
+/*
+ * DataTables sorting
+ */
+.sorting_asc  {
+  background: url('http://www.datatables.net/release-datatables/media/images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc  {
+  background: url('http://www.datatables.net/release-datatables/media/images/sort_desc.png') no-repeat center right;
+}
+
+.sorting {
+  background: url('http://www.datatables.net/release-datatables/media/images/sort_both.png') no-repeat center right;
+}
+
+.sorting_asc_disabled {
+  background: url('http://www.datatables.net/release-datatables/media/images/sort_asc_disabled.png') no-repeat center right;
+}
+
+.sorting_desc_disabled {
+  background: url('http://www.datatables.net/release-datatables/media/images/sort_desc_disabled.png') no-repeat center right;
+}
+
+
+/*
+ * jQuery UI specific styling
+ */
+.paging_two_button .ui-button {
+  float: left;
+  cursor: pointer;
+  *cursor: hand;
+}
+
+.paging_full_numbers .ui-button {
+  padding: 2px 6px;
+  margin: 0;
+  cursor: pointer;
+  *cursor: hand;
+  color: #333 !important;
+}
+
+.dataTables_paginate .ui-button {
+  margin-right: -0.1em !important;
+}
+
+.paging_full_numbers {
+  width: 350px !important;
+}
+
+.dataTables_wrapper .ui-toolbar {
+  padding: 5px;
+}
+
+.dataTables_paginate {
+  width: auto;
+}
+
+.dataTables_info {
+  padding-top: 3px;
+}
+
+table.events thead th {
+  padding: 3px 0px 3px 10px;
+  cursor: pointer;
+  *cursor: hand;
+}
+
+div.dataTables_wrapper .ui-widget-header {
+  font-weight: normal;
+}
+
+/*
+ * Sort arrow icon positioning
+ */
+table.events thead th div.DataTables_sort_wrapper {
+  position: relative;
+  padding-right: 20px;
+}
+
+table.events thead th div.DataTables_sort_wrapper span {
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  right: 0;
+}
+
+/*
+ * JQuery UI theme customisation
+ */
+.ui-helper-clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.ui-helper-clearfix {
+    display: inline-block;
+}
+* html .ui-helper-clearfix {
+    height: 1%;
+}
+.ui-helper-clearfix {
+    display: block;
+}
+.ui-helper-zfix {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ui-state-disabled {
+    cursor: default !important;
+}
+.ui-icon {
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    text-indent: -99999px;
+}
+.ui-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.ui-widget {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1.1em;
+}
+.ui-widget .ui-widget {
+    font-size: 1em;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 1em;
+}
+
+.ui-widget-header {
+    border: 1px solid yellow;
+    font-weight: bold;
+}
+
+.ui-icon {
+    height: 16px;
+    width: 16px;
+}
+
+.ui-state-default .ui-icon {
+    background-image: url("http://www.datatables.net/release-datatables/examples/examples_support/themes/smoothness/images/ui-icons_888888_256x240.png");
+}
+
+.ui-icon-carat-2-n-s {
+    background-position: -128px 0;
+}
+
+.ui-icon-triangle-1-n {
+    background-position: 0 -16px;
+}
+
+.ui-icon-triangle-1-s {
+    background-position: -64px -16px;
+}
+
+.ui-corner-tl {
+    border-top-left-radius: 4px;
+}
+.ui-corner-tr {
+    border-top-right-radius: 4px;
+}
+.ui-corner-bl {
+    border-bottom-left-radius: 4px;
+}
+.ui-corner-br {
+    border-bottom-right-radius: 4px;
+}
+.ui-corner-top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.ui-corner-bottom {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+.ui-corner-right {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.ui-corner-left {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+.ui-corner-all {
+    border-radius: 4px 4px 4px 4px;
+}
