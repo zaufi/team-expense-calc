@@ -1,3 +1,6 @@
+/*
+ * $Id: tec.js 21 2013-02-06 00:56:01Z mutanabbi $
+ */
 "use strict"
 
 function CurencyValueClass(str) {

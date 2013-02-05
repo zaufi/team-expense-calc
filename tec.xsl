@@ -36,12 +36,12 @@
 <xsl:variable name="stylesheets">
     <csslist:stylesheets>
         <csslist:stylesheet default="true">
-            <csslist:file>tec.css</csslist:file>
+            <csslist:file>css/tec.css</csslist:file>
             <csslist:title>Default theme</csslist:title>
         </csslist:stylesheet>
 
         <csslist:stylesheet>
-            <csslist:file>tec-green.css</csslist:file>
+            <csslist:file>css/tec-green.css</csslist:file>
             <csslist:title>Green scheme by Lilia (just a test)</csslist:title>
         </csslist:stylesheet>
     </csslist:stylesheets>
@@ -50,8 +50,8 @@
 <xsl:template match="/">
     <html>
         <head>
-            <link rel="stylesheet" href="tec-layout.css" type="text/css" />
-            <link rel="stylesheet" href="tec-table.css" type="text/css" />
+            <link rel="stylesheet" href="css/tec-layout.css" type="text/css" />
+            <link rel="stylesheet" href="css/tec-table.css" type="text/css" />
             <xsl:call-template name="render-stylesheet-links">
                 <xsl:with-param name="stylesheets" select="exsl:node-set($stylesheets)//csslist:stylesheet[@default = 'true']" />
                 <xsl:with-param name="type" select="'stylesheet'" />
@@ -73,7 +73,7 @@
             <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
             <script type="text/javascript" language="javascript" src="http://www.datatables.net/release-datatables/media/js/jquery.dataTables.js"></script>
             <script type="text/javascript" charset="utf-8" src="http://www.datatables.net/release-datatables/extras/FixedHeader/js/FixedHeader.js"></script>
-            <script type="text/javascript" charset="utf-8" src="tec.js">
+            <script type="text/javascript" charset="utf-8" src="js/tec.js">
             </script>
             <xsl:variable name="members-cnt" select="count(/tec:arrangement/tec:members/tec:member)"/>
             <xsl:variable name="native-cur" select="//tec:arrangement/tec:currencies/tec:currency[@native = 'true']/@id" />

@@ -1,4 +1,7 @@
 /*
+ * $Id: tec-table.css 21 2013-02-06 00:56:01Z mutanabbi $
+ */
+/*
  * DataTables features
  */
 .dataTables_wrapper {
@@ -40,30 +43,6 @@
 .dataTables_paginate {
   float: right;
   text-align: right;
-}
-
-
-/*
- * DataTables sorting
- */
-.sorting_asc  {
-  background: url('http://www.datatables.net/release-datatables/media/images/sort_asc.png') no-repeat center right;
-}
-
-.sorting_desc  {
-  background: url('http://www.datatables.net/release-datatables/media/images/sort_desc.png') no-repeat center right;
-}
-
-.sorting {
-  background: url('http://www.datatables.net/release-datatables/media/images/sort_both.png') no-repeat center right;
-}
-
-.sorting_asc_disabled {
-  background: url('http://www.datatables.net/release-datatables/media/images/sort_asc_disabled.png') no-repeat center right;
-}
-
-.sorting_desc_disabled {
-  background: url('http://www.datatables.net/release-datatables/media/images/sort_desc_disabled.png') no-repeat center right;
 }
 
 
@@ -196,7 +175,7 @@ table.events thead th div.DataTables_sort_wrapper span {
 }
 
 .ui-state-default .ui-icon {
-    background-image: url("http://www.datatables.net/release-datatables/examples/examples_support/themes/smoothness/images/ui-icons_888888_256x240.png");
+    background-image: url("../images/ui-icons_256x240.png");
 }
 
 .ui-icon-carat-2-n-s {
@@ -241,4 +220,26 @@ table.events thead th div.DataTables_sort_wrapper span {
 }
 .ui-corner-all {
     border-radius: 4px 4px 4px 4px;
+}
+
+.paging_full_numbers .ui-button {
+    cursor: pointer;
+    color: yellow !important;
+    margin: 0;
+    padding: 2px 6px;
+}
+
+.ui-state-default {
+    border: 1px solid;
+    font-weight: normal;
+}
+
+.ui-state-disabled {
+    opacity: 0.35;
+}
+
+.ui-button {
+    border: 1px solid yellow;
+    font-weight: normal;
+    background: #233D1F !important;
 }

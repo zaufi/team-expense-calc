@@ -58,6 +58,16 @@ dist: dist-zip
 
 dist-zip:
 	test -f $(package_name).zip && rm $(package_name).zip || true
-	zip $(package_name).zip tec.css tec-layout.css tec-green.css tec.xsl tec-lib.xsl tec.dtd example.xml
+	zip $(package_name).zip \
+            css/tec.css \
+            css/tec-layout.css \
+            css/tec-green.css \
+            css/tec-table.css \
+            tec.xsl \
+            tec-lib.xsl \
+            tec.dtd \
+            example.xml \
+            images/ui-icons_256x240.png \
+            js/tec.js
 
 .PHONY: all check dist dist-zip
