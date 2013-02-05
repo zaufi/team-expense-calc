@@ -22,7 +22,7 @@
         </currency>
         <currency id="usd">
             <name>USD</name>
-            <xchg to="rur" value="1">27,5715</xchg>
+            <xchg to="rur" value="1">27.5715</xchg>
         </currency>
     </currencies>
 
@@ -83,49 +83,199 @@
             <participant id="m" spent="44" />
         </event>
 
+        
+        
         <event>
-            <text>Test event 1</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="250" spent="10" />
+            <text>Alcohol from duty-free shop (Finland border)</text>
+            <used-currency id="sek" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="usd" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="rur" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="usd" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
+            <used-currency id="sek" />
+            <participant id="i" payment="100" spent="20" />
             <participant id="v" spent="40" />
-            <participant id="z" spent="10" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+
+
+
+        <event>
+            <text>Alcohol from duty-free shop (Finland border)</text>
+            <used-currency id="usd" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
+            <used-currency id="rur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
             <participant id="d" spent="40" />
             <participant id="b" spent="20" />
             <participant id="m" spent="44" />
         </event>
         
-        <event>
-            <text>Test event 2</text>
-            <used-currency id="rur" />
-            <participant id="i" payment="270" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="70" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 3</text>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       <event>
+            <text>Alcohol from duty-free shop (Finland border)</text>
             <used-currency id="usd" />
-            <participant id="i" payment="90" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="200" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
         </event>
+
         <event>
-            <text>Test event 4</text>
+            <text>Gas for Barser</text>
             <used-currency id="sek" />
-            <participant id="i" payment="110" spent="15" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
+            <used-currency id="usd" />
+            <participant id="i" payment="100" spent="20" />
             <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="10" />
+            <participant id="z" payment="100" spent="25" />
             <participant id="d" spent="40" />
             <participant id="b" spent="20" />
             <participant id="m" spent="44" />
         </event>
+
+        
+        
         <event>
-            <text>Test event 5</text>
+            <text>Alcohol from duty-free shop (Finland border)</text>
+            <used-currency id="rur" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="rur" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="sek" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="rur" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
             <used-currency id="eur" />
             <participant id="i" payment="100" spent="20" />
             <participant id="v" spent="40" />
@@ -134,9 +284,46 @@
             <participant id="b" spent="20" />
             <participant id="m" spent="44" />
         </event>
+
+
+
         <event>
-            <text>Test event 6</text>
+            <text>Alcohol from duty-free shop (Finland border)</text>
             <used-currency id="eur" />
+            <participant id="z" payment="12000" />
+            <participant id="b" />
+            <participant id="d" />
+            <participant id="m" />
+            <participant id="v" />
+        </event>
+
+        <event>
+            <text>Gas for Barser</text>
+            <used-currency id="usd" />
+            <!-- Ppl in a 1st car -->
+            <participant id="b" payment="120" />
+            <participant id="m" spent="80" />
+        </event>
+
+        <event>
+            <text>Gas for Diman</text>
+            <used-currency id="rur" />
+            <!-- Ppl in a 2nd car -->
+            <participant id="d" payment="120" spent="80"/>
+            <participant id="z" />
+        </event>
+
+        <event>
+            <text>Gas for Vanus</text>
+            <used-currency id="rur" />
+            <!-- Ppl in a 3rd car -->
+            <participant id="v" payment="150" spent="100" />
+            <participant id="i" />
+        </event>
+
+        <event>
+            <text>Visit to cafeteria</text>
+            <used-currency id="usd" />
             <participant id="i" payment="100" spent="20" />
             <participant id="v" spent="40" />
             <participant id="z" payment="100" spent="25" />
@@ -144,96 +331,7 @@
             <participant id="b" spent="20" />
             <participant id="m" spent="44" />
         </event>
-        <event>
-            <text>Test event 7</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 8</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 9</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 10</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 11</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 12</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 13</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 14</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
-        <event>
-            <text>Test event 15</text>
-            <used-currency id="eur" />
-            <participant id="i" payment="100" spent="20" />
-            <participant id="v" spent="40" />
-            <participant id="z" payment="100" spent="25" />
-            <participant id="d" spent="40" />
-            <participant id="b" spent="20" />
-            <participant id="m" spent="44" />
-        </event>
+
     </events>
 
 </arrangement>
