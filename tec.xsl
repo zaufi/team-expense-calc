@@ -85,7 +85,7 @@
                     oTable = $('#main').dataTable({
                         "bJQueryUI": true,
                         "asSorting": [],
-                         "aoColumnDefs": [{ "sType": "num-html", "aTargets": arr },
+                         "aoColumnDefs": [{ "sType": "num-html", "aTargets": [0] },
                             { "sType": "xch-html", "aTargets": arr },
                             { "sType": "xch", "aTargets": [<xsl:value-of select="$members-cnt" /> + 1] }],
                          "sPaginationType": "full_numbers"

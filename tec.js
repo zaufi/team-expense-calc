@@ -17,7 +17,6 @@ function CurencyValueClass(str) {
 
 function get_cur_value(str) {
   var x = str.replace( /^ *([-0-9,]+) *<div [^>]*class="tooltip"[^>]*>.*<span .*<span [^>]*> *[-0-9, ]+([^ <]+) *<\/span>.*$/, "$1 $2");
-  alert(x);
   x = x.replace(/,/, "");
   return new CurencyValueClass(x);
 }
@@ -47,14 +46,12 @@ jQuery.fn.dataTableExt.oSort['num-html-desc'] = function(a, b) {
 jQuery.fn.dataTableExt.oSort['xch-html-asc'] = function(a, b) {
   var x = get_cur_value(a);
   var y = get_cur_value(b);
-  alert("" + x.get_value() + " " + x.get_cur() + " ~~ " + x.get_value() + " " + x.get_cur());
   return x.compare(y);
 };
 
 jQuery.fn.dataTableExt.oSort['xch-html-desc'] = function(a, b) {
   var x = get_cur_value(a);
   var y = get_cur_value(b);
-  alert("" + x.get_value() + " " + x.get_cur() + " ~~ " + x.get_value() + " " + x.get_cur());
   return y.compare(x);
 };
     
