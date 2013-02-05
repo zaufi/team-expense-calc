@@ -68,6 +68,10 @@ dist-zip:
             tec.dtd \
             example.xml \
             images/ui-icons_256x240.png \
-            js/tec.js
+            js/tec.js \
+            js/FixedHeader.js \
+            js/jquery-1.9.1.js \
+            js/jquery-migrate-1.1.0.js \
+            js/jquery.dataTables.js
 
 .PHONY: all check dist dist-zip

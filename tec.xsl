@@ -70,9 +70,11 @@
                   />
                 <xsl:text>%; }</xsl:text>
             </style>
-            <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-            <script type="text/javascript" language="javascript" src="http://www.datatables.net/release-datatables/media/js/jquery.dataTables.js"></script>
-            <script type="text/javascript" charset="utf-8" src="http://www.datatables.net/release-datatables/extras/FixedHeader/js/FixedHeader.js"></script>
+            <script src="js/jquery-1.9.1.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/jquery.dataTables.js"></script>
+            <!-- FixedHeader uses some deprecated features from old jquery, so we need migrate plugin -->
+            <script type="text/javascript" charset="utf-8" src="js/jquery-migrate-1.1.0.js"></script>
+            <script type="text/javascript" charset="utf-8" src="js/FixedHeader.js"></script>
             <script type="text/javascript" charset="utf-8" src="js/tec.js">
             </script>
             <xsl:variable name="members-cnt" select="count(/tec:arrangement/tec:members/tec:member)"/>
