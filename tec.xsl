@@ -73,16 +73,36 @@
             <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
             <script type="text/javascript" language="javascript" src="http://www.datatables.net/release-datatables/media/js/jquery.dataTables.js"></script>
             <script type="text/javascript" charset="utf-8" src="http://www.datatables.net/release-datatables/extras/FixedHeader/js/FixedHeader.js"></script>
-            <script type="text/javascript" charset="utf-8">
-            <xsl:text>
-                $(document).ready(function() {
+            <script type="text/javascript" charset="utf-8" src="tec.js">
+            </script>
+            <xsl:variable name="members-cnt" select="count(/tec:arrangement/tec:members/tec:member)"/>
+            <xsl:variable name="native-cur" select="//tec:arrangement/tec:currencies/tec:currency[@native = 'true']/@id" />
+            <script type="text/javascript">
+              var arr = [0];
+              for (var i = 1; i &lt; <xsl:value-of select="$members-cnt" /> + 1; ++i)
+                  arr[i] = i;
+              $(document).ready(function() {
                     oTable = $('#main').dataTable({
                         "bJQueryUI": true,
-                        "sPaginationType": "full_numbers"
+                        "asSorting": [],
+                         "aoColumnDefs": [{ "sType": "num-html", "aTargets": arr },
+                            { "sType": "xch-html", "aTargets": arr },
+                            { "sType": "xch", "aTargets": [<xsl:value-of select="$members-cnt" /> + 1] }],
+                         "sPaginationType": "full_numbers"
                     });
                     new FixedHeader(oTable);
                 } );
-            </xsl:text>
+                var exch_table = [];
+                <xsl:for-each select="//tec:arrangement/tec:currencies/tec:currency">
+                    <xsl:variable name="cur-name" select="./tec:name" />
+                    <xsl:for-each select="./tec:xchg[@to = $native-cur]">
+                    <xsl:text>exch_table["</xsl:text>
+                      <xsl:value-of select="$cur-name" />
+                      <xsl:text>"] = </xsl:text>
+                      <xsl:value-of select="text()" />
+                      <xsl:text>;</xsl:text>
+                    </xsl:for-each>
+                </xsl:for-each>
             </script>
         </head>
         <body>
@@ -173,7 +193,7 @@
             <xsl:variable name="event" select="." />
             <!-- Render event number with and tooltip with details -->
             <th>
-                <span><xsl:value-of select="tec:pos" /></span>
+                <xsl:value-of select="tec:pos" />
                 <div class="tooltip">
                     <span class="event-details">
                         <xsl:call-template name="set-tooltip-width">
