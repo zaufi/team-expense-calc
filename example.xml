@@ -83,7 +83,157 @@
             <participant id="m" spent="44" />
         </event>
 
-
+        <event>
+            <text>Test event 1</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="250" spent="10" />
+            <participant id="v" spent="40" />
+            <participant id="z" spent="10" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        
+        <event>
+            <text>Test event 2</text>
+            <used-currency id="rur" />
+            <participant id="i" payment="270" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="70" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 3</text>
+            <used-currency id="usd" />
+            <participant id="i" payment="90" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="200" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 4</text>
+            <used-currency id="sek" />
+            <participant id="i" payment="110" spent="15" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="10" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 5</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 6</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 7</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 8</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 9</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 10</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 11</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 12</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 13</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 14</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
+        <event>
+            <text>Test event 15</text>
+            <used-currency id="eur" />
+            <participant id="i" payment="100" spent="20" />
+            <participant id="v" spent="40" />
+            <participant id="z" payment="100" spent="25" />
+            <participant id="d" spent="40" />
+            <participant id="b" spent="20" />
+            <participant id="m" spent="44" />
+        </event>
     </events>
 
 </arrangement>
