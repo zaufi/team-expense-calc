@@ -42,35 +42,25 @@
 
 <xsl:template name="is-event-participant-valid">
     <xsl:param name="event" />
-    <xsl:param name="pos" />
 
-    <xsl:variable name="p" select="$event/tec:participant[$pos]" />
-    <xsl:variable name="payment" select="$p/@payment" />
-    <xsl:variable name="spent" select="$p/@spent" />
-
-    <xsl:choose>
-        <!-- If payment is present it must be convertible to number -->
-        <xsl:when test="boolean($p/@payment) and string(number($payment)) = 'NaN'">
-            <xsl:value-of select="false()" />
-        </xsl:when>
-        <!-- If spent is present it must be convertible to number -->
-        <xsl:when test="boolean($p/@spent) and string(number($spent)) = 'NaN'">
-            <xsl:value-of select="false()" />
-        </xsl:when>
-        <!-- If some of them less than 0  -->
-        <xsl:when test="$payment &lt; 0 or $spent &lt; 0">
-            <xsl:value-of select="false()" />
-        </xsl:when>
-        <xsl:when test="$p != $event/tec:participant[last()]">
-            <!-- Ok current participant is valid... go for next one -->
-            <xsl:call-template name="is-event-participant-valid">
-                <xsl:with-param name="event" select="$event" />
-                <xsl:with-param name="pos" select="$pos + 1" />
-            </xsl:call-template>
-        </xsl:when>
-        <xsl:otherwise>
-        </xsl:otherwise>
-    </xsl:choose>
+    <xsl:for-each select="$event/tec:participant">
+        <xsl:choose>
+            <!-- If payment is present it must be convertible to number -->
+            <xsl:when test="string-length(current()/@payment) &gt; 0 and string(number(current()/@payment)) = 'NaN'">
+                <xsl:value-of select="false()" />
+            </xsl:when>
+            <!-- If spent is present it must be convertible to number -->
+            <xsl:when test="string-length(current()/@spent) &gt; 0 and string(number(current()/@spent)) = 'NaN'">
+                <xsl:value-of select="false()" />
+            </xsl:when>
+            <!-- If some of them less than 0  -->
+            <xsl:when test="current()/@payment &lt;= 0 or current()/@spent &lt; 0">
+                <xsl:value-of select="false()" />
+            </xsl:when>
+            <xsl:otherwise>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:for-each>
 
 </xsl:template>
 
@@ -83,7 +73,6 @@
             <xsl:variable name="r">
                 <xsl:call-template name="is-event-participant-valid">
                     <xsl:with-param name="event" select="$event" />
-                    <xsl:with-param name="pos" select="1" />
                 </xsl:call-template>
             </xsl:variable>
 
@@ -96,7 +85,8 @@
             </xsl:variable>
 
             <xsl:choose>
-                <xsl:when test="$r = 'false'">
+                <!-- r could contain smth like "falsefalsefalse"; If it's empty — no errors were occured -->
+                <xsl:when test="$r != ''">
                     <!-- Smth wrong with one of participant -->
                     <xsl:value-of select="false()" />
                 </xsl:when>
